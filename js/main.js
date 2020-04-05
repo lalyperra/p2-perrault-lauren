@@ -1,83 +1,39 @@
 
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the image and insert it inside the modal 
-var img = document.getElementById("adImage");
-var modalImg = document.getElementById("img01");
-img.onclick = function () {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-    modal.style.display = "none";
-}
-
 //'read more' button functionality
-document.querySelector('.show-more-button').addEventListener('click', function () {
-    // If text is shown less, then show complete
-    if (this.getAttribute('data-more') == 0) {
-        this.setAttribute('data-more', 1);
-        this.style.display = 'block';
-        this.innerHTML = 'Read Less';
+document.getElementById("myBtn").addEventListener("click", myFunction);
+//document.getElementById("myBtn").onclick = function () { myFunction() };
 
-        this.previousSibling.style.display = 'none';
-        this.previousSibling.previousSibling.style.display = 'inline';
-    }
-    // If text is shown complete, then show less
-    else if (this.getAttribute('data-more') == 1) {
-        this.setAttribute('data-more', 0);
-        this.style.display = 'inline';
-        this.innerHTML = 'Read More';
+function myFunction() {
+    var x = document.getElementById("more");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } 
+        else {
+            x.style.display = "none";
+        }
+}
 
-        this.previousSibling.style.display = 'inline';
-        this.previousSibling.previousSibling.style.display = 'none';
-    }
-});
+//hamburger menu
+var hamburgerIcon = document.getElementById('hamburger-icon');
+var hamburgerMenu = document.getElementById('hamburger-menu');
+var laptopSize = window.matchMedia("(min-width:998px)");
 
-/*Downloaded from https://www.codeseek.co/SgiobairOg/responsive-multi-level-dropdown-vanilla-js-evzmdN */
-window.addEventListener("load", function load(event) {
-    window.removeEventListener("load", load, false); 
-    navInit();
-}, false);
+    if (window.matchMedia("(min-width: 998px)").matches) {
+    hamburgerMenu.classList.add('show');
+    hamburgerMenu.classList.remove('hidden');
+    
+    else if(window.matchMedia("(max-width: 997px)").matches) {
+    hamburgerMenu.classList.add('hidden');
+}
 
-var navInit = function () {
-    var
-        nav = document.querySelector('nav#main'),
-        menuToggleBtns = nav.querySelectorAll('.toggle'),
-        menuToggle = function (e) {
-            //Do not visit menuToggle link
-            e.preventDefault();
+function toggleMenu() {
+    hamburgerMenu.classList.toggle('show');
+}
 
-            //force submenus closed
-            if (e.target.hasAttribute('data-toggle-main')) {
-                e.target.parentNode.querySelectorAll('ul li.open').forEach(function (tog) {
-                    tog.classList.remove('open');
-                });
-            }
-
-            //Toggle 'menuToggle' .focus class
-            e.target.parentNode.classList.toggle('open');
-        };
+hamburgerIcon.addEventListener('click', toggleMenu);
 
 
-    //add touchstart and click event handlers
-    menuToggleBtns.forEach(function (tog) {
-        tog.addEventListener('click', menuToggle)
-        tog.addEventListener('touchstart', menuToggle)
-    });
-};
-
-
-//API for charging stations
-var chargeLocation = document.getElementById('chargeLocation');
-
+//api stuff//
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
@@ -86,6 +42,8 @@ xmlhttp.onreadystatechange = function () {
         //print weather description after main section text <p>
         var chargingStations = document.createTextNode(apiResult.AddressInfo[0].title);
         chargeLocation.appendChild(chargingStations);
+        //API for charging stations
+        var chargeLocation = document.getElementById('chargeLocation');
     }
 };
 
