@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Arvo'), url(https://fonts.gstatic.com/s/arvo/v13/tDbD2oWUg0MKmSA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Arvo Bold'), local('Arvo-Bold'), url(https://fonts.gstatic.com/s/arvo/v13/tDbM2oWUg0MKoZw1yLQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lemonada';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lemonada/v9/0QI-MXFD9oygTWy_R-FFlwV-bgfR7QJGeut2mQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lemonada';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lemonada/v9/0QI-MXFD9oygTWy_R-FFlwV-bgfR7QJGnex2mQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-U1Ug.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rg-VQ.ttf) format('truetype');
+}
+h1 {
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+}
+h2 {
+  font-family: 'Lemonada', cursive;
+  font-weight: 700;
+  color: #6a9923;
+  font-size: 1.35em;
+}
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+}
+h4 {
+  font-family: 'Arvo', serif;
+  color: #154a96;
+  font-size: 1.75em;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+/**end of images on menu**/
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #6a9923;
+}
+header li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+header li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+header li a:hover {
+  background-color: #154a96;
+}
+header .active {
+  background-color: #000000;
+}
+header #small-header-logo {
+  width: 20%;
+  height: auto;
+  max-width: 100px;
+}
+/**media query for wider screens**/
+@media (min-width: 540px) {
+  article h2 {
+    font-size: 1.65em;
+  }
+  article h1 {
+    font-size: 2.7em;
+  }
+  article h3 {
+    font-size: 2em;
+  }
+}
+@media (min-width: 780px) {
+  h1 {
+    font-size: 2.5em;
+  }
+}

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Lemonada:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+h1 {
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+h2 {
+    font-family:  'Lemonada', cursive;
+    font-weight: 700;
+    color: #6a9923;
+    font-size: 1.35em;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+}
+
+h4 {
+    font-family: 'Arvo', serif;
+    color: #154a96;
+    font-size: 1.75em;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+    
+/**end of images on menu**/
+header {
+
+    ul {
+       list-style-type: none;
+       margin: 0; 
+       padding: 0;
+       overflow: hidden;
+       background-color: #6a9923;
+    }
+
+    li {
+       float: left;
+       border-right: 1px solid #bbb;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+    li a:hover {
+        background-color: #154a96;
+        }
+    
+    .active {
+        background-color:#000000;
+    }
+
+   #small-header-logo {
+        width: 20%;
+        height: auto;
+        max-width: 100px;
+    }
+}
+
+/**media query for wider screens**/
+
+@media (min-width: 540px) {
+    article {
+        h2 {
+            font-size: 1.65em;
+            }
+        h1 {
+            font-size: 2.7em;
+            }
+        h3 {
+            font-size: 2em;
+        }
+    }
+}
+
+@media (min-width: 780px) {
+    h1 {
+        font-size: 2.5em;
+    }
+}
