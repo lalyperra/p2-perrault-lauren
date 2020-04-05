@@ -233,6 +233,51 @@ figcaption {
 #sevenways img {
   max-width: 550px;
 }
+.learnMore {
+  background-color: #ffffff;
+}
+.campaigns {
+  background-color: #a5dc69;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #6a9923;
+}
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 35px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+/* Facebook */
+.fa-facebook {
+  background: #154a96;
+  color: #ffffff;
+}
+/* Twitter */
+.fa-twitter {
+  background: #154a96;
+  color: #ffffff;
+}
+/*Pinterest */
+.fa-pinterest {
+  background: red;
+  color: #ffffff;
+}
+/* Instagram */
+.fa-instagram {
+  background: yellow;
+  color: #ffffff;
+}
 /**media query for wider screens**/
 @media (min-width: 998px) {
   header #page-header {

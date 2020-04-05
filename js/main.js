@@ -1,7 +1,6 @@
 
 //'read more' button functionality
 document.getElementById("myBtn").addEventListener("click", myFunction);
-//document.getElementById("myBtn").onclick = function () { myFunction() };
 
 function myFunction() {
     var x = document.getElementById("more");
@@ -24,6 +23,7 @@ var laptopSize = window.matchMedia("(min-width:998px)");
     
     else if(window.matchMedia("(max-width: 997px)").matches) {
     hamburgerMenu.classList.add('hidden');
+    }
 }
 
 function toggleMenu() {
