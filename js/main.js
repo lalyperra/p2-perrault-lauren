@@ -60,5 +60,6 @@ xmlhttp.onreadystatechange = function () {
     }
 };
 
+//https://api.carbonintensity.org.uk/intensity/date//
 xmlhttp.open('GET', 'http://api.carbonintensity.org.uk/intensity/date', true);
 xmlhttp.send();
