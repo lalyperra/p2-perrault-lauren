@@ -20,7 +20,7 @@ var laptopSize = window.matchMedia("(min-width:998px)");
     if (window.matchMedia("(min-width: 998px)").matches) {
     hamburgerMenu.classList.add('show');
     hamburgerMenu.classList.remove('hidden');
-    
+    }
     else if(window.matchMedia("(max-width: 997px)").matches) {
     hamburgerMenu.classList.add('hidden');
     }

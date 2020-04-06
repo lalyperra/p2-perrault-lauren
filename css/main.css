@@ -54,29 +54,34 @@ h1 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 1.25em;
+  padding: 5px;
 }
 h2 {
   font-family: 'Lemonada', cursive;
   font-weight: 700;
   color: #6a9923;
-  font-size: .75em;
+  font-size: 1.1em;
+  padding: 5px;
 }
 h3 {
   font-family: 'Open Sans', sans-serif;
-  font-size: .75em;
+  font-size: 1em;
   color: #000000;
+  padding: 3px;
 }
 h4 {
   font-family: 'Arvo', serif;
   color: #154a96;
-  font-size: .5em;
+  font-size: .75em;
+  padding: 3px;
 }
 p {
   font-family: 'Open Sans', sans-serif;
   color: #000000;
+  padding: 10px;
 }
 section {
-  padding: 10px;
+  padding: 10px 0px;
 }
 section article {
   padding: 10px;
@@ -212,7 +217,7 @@ header #small-header-logo {
 }
 /**Social Media section**/
 .cards {
-  background-color: #6a9923;
+  background-color: #6d6b69;
 }
 column {
   float: left;
@@ -230,14 +235,30 @@ figcaption {
   font-size: 1.25em;
   text-align: center;
 }
+/*section-specific formatting changes*/
 #sevenways img {
   max-width: 550px;
 }
 .learnMore {
   background-color: #ffffff;
 }
+.learnMore img {
+  float: right;
+  max-height: 250px;
+  width: auto;
+  margin: 20px;
+}
+.learnMore a {
+  color: #000000;
+}
 .campaigns {
   background-color: #a5dc69;
+}
+.mission {
+  background-color: #6d6b69;
+}
+.start {
+  background-color: #154a96;
 }
 footer {
   display: flex;
@@ -249,7 +270,7 @@ footer {
 .fa {
   padding: 20px;
   font-size: 30px;
-  width: 35px;
+  width: 25px;
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
@@ -308,6 +329,45 @@ footer {
   header #int-header .header-nav {
     width: 30%;
   }
+  h1 {
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+  }
+  h2 {
+    font-family: 'Lemonada', cursive;
+    font-weight: 700;
+    color: #6a9923;
+    font-size: 1.3em;
+  }
+  h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25em;
+    color: #000000;
+  }
+  h4 {
+    font-family: 'Arvo', serif;
+    color: #154a96;
+    font-size: 1.15em;
+  }
+  p {
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+  }
+  section {
+    padding: 15px 0px;
+  }
+  img {
+    width: 75%;
+    height: auto;
+    max-width: 400px;
+    padding: 10px;
+  }
+  .learnMore img {
+    max-height: 400px;
+    margin: 20px;
+  }
   /*columns of photos*/
   figcaption {
     font-size: 1.5em;
@@ -315,7 +375,7 @@ footer {
   .column {
     float: left;
     text-align: center;
-    width: 35%;
+    width: 31%;
     padding: 1%;
   }
 }

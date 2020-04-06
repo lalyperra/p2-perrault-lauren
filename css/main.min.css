@@ -6,12 +6,12 @@
 @font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-display:swap;src:local('Open Sans Bold'),local('OpenSans-Bold'),url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rg-VQ.ttf) format('truetype')}
 *{margin:0;padding:0;border:0}
 html{font-family:'Open Sans',sans-serif;color:#000}
-h1{color:#fff;font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.25em}
-h2{font-family:Lemonada,cursive;font-weight:700;color:#6a9923;font-size:.75em}
-h3{font-family:'Open Sans',sans-serif;font-size:.75em;color:#000}
-h4{font-family:Arvo,serif;color:#154a96;font-size:.5em}
-p{font-family:'Open Sans',sans-serif;color:#000}
-section{padding:10px}
+h1{color:#fff;font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.25em;padding:5px}
+h2{font-family:Lemonada,cursive;font-weight:700;color:#6a9923;font-size:1.1em;padding:5px}
+h3{font-family:'Open Sans',sans-serif;font-size:1em;color:#000;padding:3px}
+h4{font-family:Arvo,serif;color:#154a96;font-size:.75em;padding:3px}
+p{font-family:'Open Sans',sans-serif;color:#000;padding:10px}
+section{padding:10px 0}
 section article{padding:10px}
 img{width:75%;height:auto;max-width:400px;padding:10px}
 a{color:#fff}
@@ -38,15 +38,19 @@ header #small-header-logo{width:100%;height:auto;max-width:100px;padding-right:2
 #more{display:none}
 .button{background-color:#154a96;border:none;color:#fff;padding:15px 32px;margin:10px;text-align:center;text-decoration:none;display:inline-block;font-size:16px}
 .button:hover{background-color:#6a9923;color:#fff}
-.cards{background-color:#6a9923}
+.cards{background-color:#6d6b69}
 column{float:left;width:90%;padding:5%}
 .row::after{content:"";clear:both;display:table}
 figcaption{font-family:myriad-pro,sans-serif;font-size:1.25em;text-align:center}
 #sevenways img{max-width:550px}
 .learnMore{background-color:#fff}
+.learnMore img{float:right;max-height:250px;width:auto;margin:20px}
+.learnMore a{color:#000}
 .campaigns{background-color:#a5dc69}
+.mission{background-color:#6d6b69}
+.start{background-color:#154a96}
 footer{display:flex;flex-direction:row;justify-content:center;background-color:#6a9923}
-.fa{padding:20px;font-size:30px;width:35px;text-align:center;text-decoration:none;border-radius:50%}
+.fa{padding:20px;font-size:30px;width:25px;text-align:center;text-decoration:none;border-radius:50%}
 .fa:hover{opacity:.7}
 .fa-facebook{background:#154a96;color:#fff}
 .fa-twitter{background:#154a96;color:#fff}
@@ -61,6 +65,14 @@ header #desktop-menu{height:100vh;text-align:right}
 header #desktop-menu ul li{padding:30px 0;list-style:none}
 header #int-header{flex-direction:row}
 header #int-header .header-nav{width:30%}
+h1{color:#fff;font-family:'Open Sans',sans-serif;font-weight:700;font-size:2em}
+h2{font-family:Lemonada,cursive;font-weight:700;color:#6a9923;font-size:1.3em}
+h3{font-family:'Open Sans',sans-serif;font-size:1.25em;color:#000}
+h4{font-family:Arvo,serif;color:#154a96;font-size:1.15em}
+p{font-family:'Open Sans',sans-serif;color:#000}
+section{padding:15px 0}
+img{width:75%;height:auto;max-width:400px;padding:10px}
+.learnMore img{max-height:400px;margin:20px}
 figcaption{font-size:1.5em}
-.column{float:left;text-align:center;width:35%;padding:1%}
+.column{float:left;text-align:center;width:31%;padding:1%}
 }
