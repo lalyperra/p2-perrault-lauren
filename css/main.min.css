@@ -18,10 +18,11 @@ a{color:#fff}
 a:active,a:link{text-decoration:none}
 #wrapper{width:100%}
 span[class^=icon-]{line-height:2.5em}
-nav{width:100vw;background:#333;color:#fff;display:flex;align-items:stretch}
+nav{width:100vw;background:#fff;color:#000;display:flex}
+nav img{width:100%;height:auto;max-width:120px;float:left}
 nav a{color:#fff;padding:.5em .8em;width:100%}
 nav ul{list-style-type:none;display:flex;margin:0;padding:0}
-nav ul li{position:relative}
+nav ul li{position:relative;float:right}
 nav ul li a{display:block;overflow:hidden;background:#ccc;text-decoration:none}
 li.has-children{justify-content:center}
 li.has-children ul{position:absolute;top:100%;padding:0;flex-flow:column nowrap}

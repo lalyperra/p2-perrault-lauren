@@ -108,10 +108,15 @@ span[class^="icon-"] {
 }
 nav {
   width: 100vw;
-  background: #333;
-  color: #fff;
+  background: #ffffff;
+  color: #000000;
   display: flex;
-  align-items: stretch;
+}
+nav img {
+  width: 100%;
+  height: auto;
+  max-width: 120px;
+  float: left;
 }
 nav a {
   color: #fff;
@@ -126,6 +131,7 @@ nav ul {
 }
 nav ul li {
   position: relative;
+  float: right;
 }
 nav ul li a {
   display: block;
