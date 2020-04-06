@@ -19,16 +19,39 @@
 		<![endif]-->
 
 	<body>
-		<header>
-			<nav>
+	<header>
+		<div id="wrapper">
+			<nav role="navigation" id="main" class="">
+				<!-- Hamburger menu - hidden until collapsed -->
+				<a data-toggle-main class="icon-reorder toggle skip-link collapse" title="Go to menu" href="#index"></a>
+	
+				<!-- Menu -->
 				<ul>
-						<li><img id="small-header-logo" src="images/LogoTitle.png" alt="logo image" title="MyOneEarth title"></li>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="learn.html" class="active">Learn</a></li>
-						<li><a href="act.html">Act</a></li>
+					<li><img id="small-header-logo" src="images/LogoTitle.png" alt="logo image" title="MyOneEarth title">
+					</li>
+					<li><a href="index.html">Home</a></li>
+					<li class="has-children"><a class="toggle" href="learn.html" class="active">Learn</a>
+						<ul>
+							<li>
+								<a href="#grade">Grade School</a>
+							</li>
+							<li>
+								<a href="#middle">Middle School</a>
+							</li>
+							<li>
+								<a href="#high">High School</a>
+							</li>
+							<li>
+								<a href="#18">18 years+</a>
+							</li>
+						</ul>
+					</li>
+					<!--ends children-->
+					<li><a href="act.html">Act</a></li>
 				</ul>
-			</nav>	
-      </header>
+			</nav>
+		</div>
+	</header>
 
 		<main>
 				<section class="cards">
@@ -90,19 +113,6 @@
 					occurring marine colonies, thus posing a threat to the functioning of ecosystems. The billions of micro-plastic
 					particles floating in the ocean are all potential carriers of non-indigenous invasive species.
 					</p>
-			</section>
-			<section>
-				<div class="cards">
-					<h1>School Projects for Elementary School Students</h1>
-					<figure class="row">
-							<div class="column">
-								<img src="images/students1.jpg" alt="student ideas">
-							</div>
-							<div class="column">
-							<img src="images/students2.jpg" alt="student ideas">
-							</div>
-					</figure>
-				</div>
 			</section>
 		</main>
 

@@ -6,10 +6,7 @@
 		<meta charset="utf-8">
 
 		<title>My One Earth</title>
-
-		<link type="text/css" rel="stylesheet" href="styles.css" />
-	<link
-	href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Lemonada:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+	<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Lemonada:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
 	rel="stylesheet">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet/less" type="text/css" href="styles.less" />
@@ -21,11 +18,12 @@
 		<!--[if lt IE 9]>
 		<![endif]-->
 
-		<body>
+<body>
+	<header>
 			<div id="wrapper">
 				<nav role="navigation" id="main" class="">
 				<!-- Hamburger menu - hidden until collapsed -->
-				<a data-toggle-main class="icon-reorder toggle skip-link collapse" title="Go to menu" href="#menu"></a>
+				<a data-toggle-main class="icon-reorder toggle skip-link collapse" title="Go to menu" href="#index"></a>
 		
 				<!-- Menu -->
 					<ul>
@@ -34,16 +32,16 @@
 						<li class="has-children"><a class="toggle" href="learn.html">Learn</a>
 							<ul>
 								<li>
-									<a href="#">Grade School</a>
+									<a href="#grade">Grade School</a>
 								</li>
 								<li>
-									<a href="#">Middle School</a>
+									<a href="#middle">Middle School</a>
 								</li>
 								<li>
-									<a href="#">High School</a>
+									<a href="#high">High School</a>
 								</li>
 								<li>
-									<a href="#">18 years+</a>
+									<a href="#18">18 years+</a>
 								</li>
 							</ul>
 						</li>
@@ -55,9 +53,8 @@
 </header>
 
 		<main>
-			<section>
+			<section class="start">
 				<p>Current United Kingdom Index: <span id="ukIndex"></span></p> 
-					<article class="start">
 						<h1>But what can I do?</h1>
 						<figure class="row">
 							<div class="column">
@@ -70,7 +67,31 @@
 								<img src="images/9waysa.jpg" id="nineaways" alt="ideas for sustainability">
 							</div>
 						</figure>
-					</article>
+			</section>
+			<section>
+			<article>
+				<h3 id="grade">Grade School Ideas</h3>
+					<div class="cards">
+						<h1>School Projects for Elementary School Students</h1>
+						<figure class="row">
+							<div class="column">
+								<img src="images/students1.jpg" alt="student ideas">
+							</div>
+							<div class="column">
+								<img src="images/students2.jpg" alt="student ideas">
+							</div>
+						</figure>
+					</div>
+			</article>
+			<article>
+				<h3 id="middle">Middle School Ideas</h3>
+			</article>
+			<article>
+				<h3 id="high">High School Ideas</h3>
+			</article>
+			<article>
+				<h3 id="18">Adults 18 and Older Ideas</h3>
+			</article>
 			<section class="partners">
 					<h1>Our Partners</h1>
 					<h3>Click on the website below to visit our partner's site.</h3>

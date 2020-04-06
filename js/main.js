@@ -12,7 +12,7 @@ function myFunction() {
         }
 }
 
-/*hamburger menu downloaded from https://www.codeseek.co/SgiobairOg/responsive-multi-level-dropdown-vanilla-js-evzmdN */
+/*Downloaded from https://www.codeseek.co/SgiobairOg/responsive-multi-level-dropdown-vanilla-js--evzmdN */
 window.addEventListener("load", function load(event) {
     window.removeEventListener("load", load, false); //remove listener, no longer needed
     navInit();
@@ -36,8 +36,6 @@ var navInit = function () {
             //Toggle 'menuToggle' .focus class
             e.target.parentNode.classList.toggle('open');
         };
-
-
     //add touchstart and click event handlers
     menuToggleBtns.forEach(function (tog) {
         tog.addEventListener('click', menuToggle)
@@ -45,22 +43,19 @@ var navInit = function () {
     });
 };
 
-//api stuff//
-
-var ukIndex = document.getElementById('ukIndex');
-
+//api stuff
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
         var apiResult = JSON.parse(this.responseText);
 
-    //print index for today after
-    var ukIndex = document.getElementById('ukIndex');
-    ukIndex.innerHTML = apiResult.data[0].intensity.index;
-    
+        //print index for today after paragraph intro 
+        var ukIndex = document.getElementById('ukIndex');
+        ukIndex.innerHTML = apiResult.data[0].intensity.index;
+
     }
 };
 
-//https://api.carbonintensity.org.uk/intensity/date//
+//https://api.carbonintensity.org.uk/intensity/date
 xmlhttp.open('GET', 'http://api.carbonintensity.org.uk/intensity/date', true);
 xmlhttp.send();

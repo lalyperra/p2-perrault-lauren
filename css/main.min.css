@@ -6,11 +6,11 @@
 @font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-display:swap;src:local('Open Sans Bold'),local('OpenSans-Bold'),url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rg-VQ.ttf) format('truetype')}
 *{margin:0;padding:0;border:0}
 html{font-family:'Open Sans',sans-serif;color:#000}
-h1{color:#fff;font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.25em;padding:5px}
-h2{font-family:Lemonada,cursive;font-weight:700;color:#6a9923;font-size:1.1em;padding:5px}
-h3{font-family:'Open Sans',sans-serif;font-size:1em;color:#000;padding:3px}
-h4{font-family:Arvo,serif;color:#154a96;font-size:.75em;padding:3px}
-p{font-family:'Open Sans',sans-serif;color:#000;padding:10px}
+h1{color:#fff;font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.25em;padding:2%}
+h2{font-family:Lemonada,cursive;font-weight:700;color:#6a9923;font-size:1.1em;padding:2%}
+h3{font-family:'Open Sans',sans-serif;font-size:1em;color:#000;padding:2%}
+h4{font-family:Arvo,serif;color:#154a96;font-size:.75em;padding:2%}
+p{font-family:'Open Sans',sans-serif;color:#000;padding:2%}
 section{padding:10px 0}
 section article{padding:10px}
 img{width:75%;height:auto;max-width:400px;padding:10px}
@@ -18,11 +18,11 @@ a{color:#fff}
 a:active,a:link{text-decoration:none}
 #wrapper{width:100%}
 span[class^=icon-]{line-height:2.5em}
-nav{width:100vw;background:#fff;color:#000;display:flex}
-nav img{width:100%;height:auto;max-width:100px;float:left}
+nav{width:100vw;background:#ccc;color:#000;display:flex;flex-direction:column}
+nav #small-header-logo{width:100%;height:auto;max-width:100px;float:left}
 nav a{color:#fff;padding:.5em .8em;width:100%}
 nav ul{list-style-type:none;display:flex;margin:0;padding:0}
-nav ul li{position:relative;float:right}
+nav ul li{position:relative;float:left}
 nav ul li a{display:block;overflow:hidden;background:#ccc;text-decoration:none}
 li.has-children{justify-content:center}
 li.has-children ul{position:absolute;top:100%;padding:0;flex-flow:column nowrap}
@@ -38,13 +38,13 @@ li.has-children:hover ul li:hover a{background:#aaa}
 .cards{background-color:#6d6b69}
 column{float:left;width:90%;padding:5%}
 .row::after{content:"";clear:both;display:table}
-figcaption{font-family:myriad-pro,sans-serif;font-size:1.25em;text-align:center}
+figcaption{font-family:myriad-pro,sans-serif;font-size:1.25em;text-align:center;padding:2%}
 #sevenways img{max-width:550px}
 .learnMore{background-color:#fff}
 .learnMore img{float:right;max-height:250px;width:auto;margin:20px}
 .learnMore a{color:#000}
 .campaigns{background-color:#a5dc69}
-.mission{background-color:#6d6b69}
+.mission,.partners{background-color:#6d6b69}
 .start{background-color:#154a96}
 footer{display:flex;flex-direction:row;justify-content:center;background-color:#6a9923}
 .fa{padding:20px;font-size:30px;width:25px;text-align:center;text-decoration:none;border-radius:50%}
@@ -55,11 +55,13 @@ footer{display:flex;flex-direction:row;justify-content:center;background-color:#
 .fa-instagram{background:#ff0;color:#fff}
 @media (min-width:998px){
 nav{justify-content:center}
-nav img{width:20%;height:auto;max-width:120px}
+nav #small-header-logo{width:100%;height:auto;max-width:100px;padding-right:25px}
 nav .collapse{display:none;height:0}
 nav .collapse ul{position:relative;font-size:2em}
 nav .collapse ul li{float:left}
-nav .collapse ul li li a{display:block;padding:15px}
+nav .collapse ul li li a{display:block;padding:15px;text-align:center}
+nav .collapse ul li a:hover{background-color:#154a96}
+nav .collapse ul li .active{background-color:#154a96}
 h1{color:#fff;font-family:'Open Sans',sans-serif;font-weight:700;font-size:2em}
 h2{font-family:Lemonada,cursive;font-weight:700;color:#6a9923;font-size:1.3em}
 h3{font-family:'Open Sans',sans-serif;font-size:1.25em;color:#000}

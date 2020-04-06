@@ -23,20 +23,43 @@
 		<![endif]-->
 
 	<body>
-		<header>
-			<nav>
-				<ul>
-					<li><img id="small-header-logo" src="images/LogoTitle.png" alt="logo image" title="MyOneEarth title"></li>
-					<li><a href="index.html" class="active">Home</a></li>
-					<li><a href="learn.html">Learn</a></li>
-					<li><a href="act.html">Act</a></li>
-				</ul>
-			</nav>
-		</header>
+<header>
+	<div id="wrapper">
+		<nav role="navigation" id="main" class="">
+			<!-- Hamburger menu - hidden until collapsed -->
+			<a data-toggle-main class="icon-reorder toggle skip-link collapse" title="Go to menu" href="#index"></a>
+
+			<!-- Menu -->
+			<ul>
+				<li><img id="small-header-logo" src="images/LogoTitle.png" alt="logo image" title="MyOneEarth title">
+				</li>
+				<li><a href="index.html" class="active">Home</a></li>
+				<li class="has-children"><a class="toggle" href="learn.html">Learn</a>
+					<ul>
+						<li>
+							<a href="#grade">Grade School</a>
+						</li>
+						<li>
+							<a href="#middle">Middle School</a>
+						</li>
+						<li>
+							<a href="#high">High School</a>
+						</li>
+						<li>
+							<a href="#18">18 years+</a>
+						</li>
+					</ul>
+				</li>
+				<!--ends children-->
+				<li><a href="act.html" >Act</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
 
 		<main>
 				<section>
-					<article class="hero-image">
+					<article src="/images/plastic.jpg">
 						<div class="hero-text">
 								<h1>80% of ocean pollution is plastic and it's killing sea life! </h1>
 								<h3><div class="button"><a href="learn.html#plastic">Read More</a></div></h3>

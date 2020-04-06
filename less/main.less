@@ -17,7 +17,7 @@ h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 1.25em;
-    padding: 5px;
+    padding: 2%;
 }
 
 h2 {
@@ -25,27 +25,27 @@ h2 {
     font-weight: 700;
     color: @green;
     font-size: 1.1em;
-    padding: 5px;
+    padding: 2%;
 }
 
 h3 {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     color: @black;
-    padding: 3px;
+    padding: 2%;
 }
 
 h4 {
     font-family: 'Arvo', serif;
     color:@blue;
     font-size: .75em;
-    padding: 3px;
+    padding: 2%;
 }
 
 p {
     font-family: 'Open Sans', sans-serif;
     color: @black;
-    padding: 10px;
+    padding: 2%;
 }
 
 section {
@@ -75,15 +75,17 @@ a:link, a:active {
 }
 span[class^="icon-"] {
   line-height: 2.5em;
+  color: @green;
 }
 
 nav {
   width: 100vw;
-  background: @white;
+  background: #cccccc;
   color: @black;
   display: flex;
+  align-items: stretch;
   
-    img {
+    #small-header-logo {
         width: 100%;
         height: auto;
         max-width: 100px;
@@ -103,37 +105,108 @@ nav {
     padding: 0;
         li {
         position: relative;
-        float: right;
             a {
             display: block;
             overflow: hidden;
-            background: #ccc;
+            background: #cccccc;
             text-decoration: none;
             }
         }
     }
 }
 
-  li.has-children {
+@media screen and ( max-width: 768px )
+    li.has-children {
+    justify-content: left;
+    flex-flow: column nowrap;
+    position: relative;
+    
+    ul {
+      position: relative;
+      top: 100%;
+      width: 100%;
+      padding: 0;
+      flex-flow: column nowrap;
+      
+      li {
+        a {
+          width: 100%;
+          max-height: 0;
+          padding: 0;
+          padding-left: 5em;
+          transition: 500ms ease-in-out 50ms;
+          
+    &.open {
+      ul {
+        li {
+          a {
+            max-height: 3em;
+            padding: .3em 0;
+            padding-left: 6em;
+          }
+          &:hover a {
+            background: #aaa;
+          }
+        }
+      }
+    }
+}
+@media (min-width: 769px )  /*Full Menu Submenu*/
+nav {
     justify-content: center;
+      ul {
+      position: absolute;
+      top: 100%;
+      padding: 0;
+      flex-flow: column nowrap;
+      
+      li{
+        position: relative
+        a {
+          width: 100%;
+          max-height: 0;
+          padding: 0;
+          padding-left: 2em;
+          transition: 500ms ease-in-out 50ms;
+          white-space: nowrap;
+    
+    &:hover {
+      ul {
+        li {
+          a {
+            width: 100%;
+            max-height: 3em;
+            padding: .3em 0;
+            padding-left: 2em;
+            white-space: nowrap;
+            
+          &:hover a {
+            background: #aaa;
+            }
+            }
+        } 
+    }
+}
+ /** li.has-children {
+    justify-content: left;
+    flex-flow: column nowrap;
+    position: relative;
         ul {
-            position: absolute;
+            position: relative;
             top: 100%;
+            width: 100%;
             padding: 0;
             flex-flow: column nowrap;
-            li {
-            position: relative;     
-                a {
-                    width: 100%;
-                    max-height: 0;
-                    padding: 0;
-                    padding-left: 2em;
-                    transition: 500ms ease-in-out 50ms;
-                    white-space: nowrap;
+            li a {
+                width: 100%;
+                max-height: 0;
+                padding: 0;
+                padding-left: 2em;
+                transition: 500ms ease-in-out 50ms;
+                white-space: nowrap;
                 }
             }
-        }
-  }
+    }
 
   li.has-children:hover ul li a {
     width: 100%;
@@ -144,8 +217,9 @@ nav {
     } 
 
   li.has-children:hover ul li:hover a {
-    background: #aaa;
+    background: @gray;
     }
+    **/
 
 //*hero image container**/
 .hero-image {
@@ -210,6 +284,7 @@ figcaption {
   font-family: myriad-pro, sans-serif;
   font-size: 1.25em;
   text-align: center;
+  padding: 2%;
 }
 
 /*section-specific formatting changes*/
@@ -234,7 +309,7 @@ figcaption {
     background-color: @lightgreen;
 }
 
-.mission {
+.mission, .partners {
     background-color: @gray;
 }
 
@@ -291,12 +366,13 @@ footer {
 @media (min-width: @laptop) {
      nav {
         justify-content: center;
-        
-        img {
-           width: 20%;
-           height: auto;
-           max-width: 120px;
-        }
+
+        #small-header-logo {	
+                height: 100%;	
+                width: auto;	
+                max-width: 200px;	
+                padding-right: 25px;	
+            }
         .collapse {
             display: none;
             height: 0;
@@ -309,11 +385,20 @@ footer {
                     li a {
                         display: block;
                         padding: 15px;
+                        text-align: center;
+                    }
+                    a:hover {
+                        background-color: @blue;
                     }
                 }
+            }    
+        }
+     }  
+     
+     li .active {
+                background-color: @blue;
             }
-        }    
-    }  
+
         h1 {
         color: @white;
         font-family: 'Open Sans', sans-serif;
