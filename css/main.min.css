@@ -57,8 +57,9 @@ footer{display:flex;flex-direction:row;justify-content:center;background-color:#
 nav{justify-content:center}
 nav img{width:20%;height:auto;max-width:120px}
 nav .collapse{display:none;height:0}
-nav .collapse ul{position:relative}
-nav .collapse ul li{font-size:2em}
+nav .collapse ul{position:relative;font-size:2em}
+nav .collapse ul li{float:left}
+nav .collapse ul li li a{display:block;padding:15px}
 h1{color:#fff;font-family:'Open Sans',sans-serif;font-weight:700;font-size:2em}
 h2{font-family:Lemonada,cursive;font-weight:700;color:#6a9923;font-size:1.3em}
 h3{font-family:'Open Sans',sans-serif;font-size:1.25em;color:#000}

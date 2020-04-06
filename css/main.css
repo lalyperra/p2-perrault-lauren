@@ -304,9 +304,14 @@ footer {
   }
   nav .collapse ul {
     position: relative;
+    font-size: 2em;
   }
   nav .collapse ul li {
-    font-size: 2em;
+    float: left;
+  }
+  nav .collapse ul li li a {
+    display: block;
+    padding: 15px;
   }
   h1 {
     color: #ffffff;

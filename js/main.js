@@ -55,8 +55,9 @@ xmlhttp.onreadystatechange = function () {
         var apiResult = JSON.parse(this.responseText);
 
     //print index for today after
-    var weatherForecast = document.createTextNode(apiResult.data[0].index);
-    ukIndex.appendChild(weatherForecast);
+    var ukIndex = document.getElementById('ukIndex');
+    ukIndex.innerHTML = apiResult.data[0].intensity.index;
+    
     }
 };
 
