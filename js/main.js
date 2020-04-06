@@ -46,18 +46,19 @@ var navInit = function () {
 };
 
 //api stuff//
+
+var ukIndex = document.getElementById('ukIndex');
+
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
         var apiResult = JSON.parse(this.responseText);
 
-        //print weather description after main section text <p>
-        var chargingStations = document.createTextNode(apiResult.AddressInfo[0].title);
-        chargeLocation.appendChild(chargingStations);
-        //API for charging stations
-        var chargeLocation = document.getElementById('chargeLocation');
+    //print index for today after
+    var weatherForecast = document.createTextNode(apiResult.data[0].index);
+    ukIndex.appendChild(weatherForecast);
     }
 };
 
-xmlhttp.open('GET', 'https://api.openchargemap.io/v3/poi/?output=json&countrycode=US&maxresults=10', true);
+xmlhttp.open('GET', 'https://api.carbonintensity.org.uk/intensity/date', true);
 xmlhttp.send();
