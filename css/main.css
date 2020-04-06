@@ -115,7 +115,7 @@ nav {
 nav img {
   width: 100%;
   height: auto;
-  max-width: 120px;
+  max-width: 100px;
   float: left;
 }
 nav a {
@@ -293,12 +293,20 @@ footer {
   nav {
     justify-content: center;
   }
+  nav img {
+    width: 20%;
+    height: auto;
+    max-width: 120px;
+  }
   nav .collapse {
     display: none;
     height: 0;
   }
   nav .collapse ul {
     position: relative;
+  }
+  nav .collapse ul li {
+    font-size: 2em;
   }
   h1 {
     color: #ffffff;

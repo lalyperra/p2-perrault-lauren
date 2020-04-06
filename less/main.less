@@ -83,11 +83,10 @@ nav {
   color: @black;
   display: flex;
   
-
     img {
         width: 100%;
         height: auto;
-        max-width: 120px;
+        max-width: 100px;
         float: left;
     }
 
@@ -292,11 +291,21 @@ footer {
 @media (min-width: @laptop) {
      nav {
         justify-content: center;
+        
+        img {
+           width: 20%;
+           height: auto;
+           max-width: 120px;
+        }
         .collapse {
             display: none;
             height: 0;
         ul {
             position: relative;
+
+                li {
+                    font-size: 2em; 
+                }
             }
         }    
     }  
