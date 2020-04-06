@@ -12,26 +12,38 @@ function myFunction() {
         }
 }
 
-//hamburger menu
-var hamburgerIcon = document.getElementById('hamburger-icon');
-var hamburgerMenu = document.getElementById('hamburger-menu');
-var laptopSize = window.matchMedia("(min-width:998px)");
+/*hamburger menu downloaded from https://www.codeseek.co/SgiobairOg/responsive-multi-level-dropdown-vanilla-js-evzmdN */
+window.addEventListener("load", function load(event) {
+    window.removeEventListener("load", load, false); //remove listener, no longer needed
+    navInit();
+}, false);
 
-    if (window.matchMedia("(min-width: 998px)").matches) {
-    hamburgerMenu.classList.add('show');
-    hamburgerMenu.classList.remove('hidden');
-    }
-    else if(window.matchMedia("(max-width: 997px)").matches) {
-    hamburgerMenu.classList.add('hidden');
-    }
-}
+var navInit = function () {
+    var
+        nav = document.querySelector('nav#main'),
+        menuToggleBtns = nav.querySelectorAll('.toggle'),
+        menuToggle = function (e) {
+            //Do not visit menuToggle link
+            e.preventDefault();
 
-function toggleMenu() {
-    hamburgerMenu.classList.toggle('show');
-}
+            //force submenus closed
+            if (e.target.hasAttribute('data-toggle-main')) {
+                e.target.parentNode.querySelectorAll('ul li.open').forEach(function (tog) {
+                    tog.classList.remove('open');
+                });
+            }
 
-hamburgerIcon.addEventListener('click', toggleMenu);
+            //Toggle 'menuToggle' .focus class
+            e.target.parentNode.classList.toggle('open');
+        };
 
+
+    //add touchstart and click event handlers
+    menuToggleBtns.forEach(function (tog) {
+        tog.addEventListener('click', menuToggle)
+        tog.addEventListener('touchstart', menuToggle)
+    });
+};
 
 //api stuff//
 var xmlhttp = new XMLHttpRequest();
